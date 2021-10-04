@@ -16,3 +16,16 @@ function printHello(){
 //some JavaScript runs
 //console.log(addition(4, 5));
 //addition(4, 5);
+
+function buildTable(data){
+    tbody.html("");
+}
+
+data.forEach((dataRow) => {
+    let row = tbody.append("tr")
+    Object.values(dataRow).forEach((val) => {
+        let cell = row.append("td");
+        cell.text(val);
+        }
+    );
+});
